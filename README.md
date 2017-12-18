@@ -1,5 +1,13 @@
 # TodoPotentially
 
+A personalized extension on the common TodoMVC available for reference on the internet.
+
+Built with AngularJS and TypeScript as a personal exercise to learn TypeScript.
+
+Base application built with all credits to source material by http://todomvc.com/
+
+## Angular Generated README
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
 
 ## Development server
