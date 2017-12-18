@@ -13,8 +13,6 @@
 .todoapp .header h1 {
   padding: 16px 16px 16px 60px;
   border: none;
-  /*background: rgba(0, 0, 0, 0.003);*/
-  /*box-shadow: inset 0 -2px 1px rgba(145,255,75,0.3);*/
 
   font-weight: bold;
   letter-spacing: 3px;
@@ -36,8 +34,6 @@
 
 .new-list {
   margin: 0;
-  /*width: 75%;*/
-  /*line-height: 1.4em;*/
   color: inherit;
   outline: none;
   padding: 6px;
@@ -158,9 +154,7 @@ ul.todo-list li {
   border: none;
   background: none;
 
-
   float: right;
-
   z-index: 1;
 
   width: 20px;
@@ -190,6 +184,19 @@ ul.todo-list li {
 
 .todo-list li.editing:last-child {
   margin-bottom: -1px;
+}
+
+.todo-list li.editing .edit {
+  display: block;
+  border: none;
+  background: none;
+
+  box-shadow: none;
+  border-bottom: 2px dotted rgba(20,65,15,0.25);
+}
+
+.todo-list li.editing .view {
+  display: none;
 }
 
 .todo-list li.completed label {
@@ -225,8 +232,8 @@ span.todo-count {
 
 .todoapp .footer button:hover {
   background-color: #07ca94;
-  box-shadow: 3px 3px 5px 1px rgba(255,255,65,0.3), inset 0px -15px 10px -12px rgba(7,38,141,0.5);
-  /*font-weight: bold;*/
+  box-shadow: 3px 3px 5px 1px rgba(7,38,141,0.3), inset 0px -15px 10px -12px rgba(0,0,0,0.5);
+
   color: white;
   cursor: pointer;
 }

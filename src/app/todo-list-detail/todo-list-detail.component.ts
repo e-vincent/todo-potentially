@@ -44,11 +44,6 @@ export class TodoListDetail implements OnInit {
     });
   }
 
-  // constructor(todoList: TodoList) {
-  //  console.log('construct item')
-  //  console.log(todoList);
-  //   this.todoList = todoList;
-  // }
   constructor(
     private _listService: ListService, 
     private _route: ActivatedRoute, 
