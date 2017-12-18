@@ -1,4 +1,4 @@
-# TodoPotentially
+# todo-potentially
 
 A personalized extension on the common TodoMVC available for reference on the internet.
 
