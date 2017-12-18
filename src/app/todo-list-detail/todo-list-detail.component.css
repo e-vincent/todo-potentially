@@ -1,0 +1,232 @@
+.todoapp {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  width: 80%;
+
+  background-color: #fdfdfd;
+  border-radius: 15px 50px;
+  border: 1px solid rgba(7,202,148,0.3);
+  box-shadow: 3px 3px 5px 1px rgba(7,202,148,0.3);
+  padding: 5px 30px 40px 30px;
+}
+
+.todoapp .header h1 {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  /*background: rgba(0, 0, 0, 0.003);*/
+  /*box-shadow: inset 0 -2px 1px rgba(145,255,75,0.3);*/
+
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #07268d;
+}
+
+.todoapp.header .title {
+  width: 25%;
+}
+
+.todoapp .list-body {
+  box-sizing: border-box;
+}
+
+.list-body .wrapper {
+  box-sizing: border-box;
+  height: auto;
+}
+
+.new-list {
+  margin: 0;
+  /*width: 75%;*/
+  /*line-height: 1.4em;*/
+  color: inherit;
+  outline: none;
+  padding: 6px;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  background: none;
+}
+
+.todoapp header {
+  margin-bottom: 20px;
+}
+
+.todoapp input::-webkit-input-placeholder {
+  font-style: italic;
+  font-weight: 300;
+  color: #14410e;
+}
+
+.todoapp input::-moz-placeholder {
+  font-style: italic;
+  font-weight: 300;
+  color: #14410e;
+}
+
+.todoapp input::input-placeholder {
+  font-style: italic;
+  font-weight: 300;
+  color: #14410e;
+}
+
+.new-todo,
+.edit {
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  color: inherit;
+  padding: 6px;
+  border: 1px solid #14410e;
+  white-space: nowrap;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.new-todo {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: none;
+
+  box-shadow: none;
+  border-bottom: 2px dotted rgba(20,65,15,0.25);
+}
+
+.mark-completed {
+  font-size: 12px;
+  padding: 16px 16px 16px 60px;
+  color: #07268d;
+}
+
+.mark-completed label {
+  margin-bottom: 2px;
+}
+
+.toggle-all,
+.toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-all:checked,
+.toggle:checked {
+  border: 1px solid #ecffe4;
+  box-shadow: inset 0px -15px 10px -12px rgba(7,202,148,0.75);
+}
+
+button,
+input[type="checkbox"] {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+ul.todo-list {
+  width: 100%;
+  list-style: none;
+}
+
+ul.todo-list li {
+  clear: both;
+  vertical-align: middle;
+  width: 90%;
+  padding: 8px 8px 8px 20px;
+
+  box-sizing: border-box;
+  display: block;
+}
+
+.todo-list li .destroy {
+  display: none;
+  border: none;
+  background: none;
+
+
+  float: right;
+
+  z-index: 1;
+
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+  font-size: 20px;
+  color: #07268d;
+  transition: color 0.2s ease-out;
+}
+
+.todo-list li:hover .destroy {
+  display: block;
+  cursor: pointer;
+}
+
+.todo-list li .destroy:hover {
+  color: #07ca94;
+}
+
+.todo-list li .destroy:after {
+  content: '×';
+}
+
+.todo-list li .edit {
+  display: none;
+}
+
+.todo-list li.editing:last-child {
+  margin-bottom: -1px;
+}
+
+.todo-list li.completed label {
+  color: #07ca94;
+  text-decoration: line-through;
+}
+
+.todo-list li .view {
+  display: block;
+}
+
+span.todo-count {
+  padding: 2px 15px;
+  border-radius: 15px 50px;
+  background-color: #07268d;
+  color: #ffffff;
+}
+
+.todoapp .footer {
+  margin-top: 30px;
+}
+
+.todoapp .footer button {
+  background: none;
+  border-radius: 15px 50px;
+  padding: 2px 15px;
+  border: 1px #07268d solid;
+  color: #07268d;
+  float: right;
+  margin-left: 10px;
+  box-shadow: inset 0px -15px 10px -12px rgba(0,0,0,0.5);
+}
+
+.todoapp .footer button:hover {
+  background-color: #07ca94;
+  box-shadow: 3px 3px 5px 1px rgba(255,255,65,0.3), inset 0px -15px 10px -12px rgba(7,38,141,0.5);
+  /*font-weight: bold;*/
+  color: white;
+  cursor: pointer;
+}

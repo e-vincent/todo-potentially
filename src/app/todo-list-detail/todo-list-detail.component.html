@@ -1,0 +1,34 @@
+<section class="todoapp">
+  <header *ngIf="_newList" class="header">
+    <h1><span class="title">New Todo List |</span> <input class="new-list" mattooltip="HI" placeholder="Enter List Name" autofocus="" [(ngModel)]="listName" (keyup.enter)="saveTodos()"></h1>
+  </header>
+  <header *ngIf="!_newList" class="header">
+    <h1>{{displayName(listName)}}</h1>
+  </header>
+  <section class="new-title">
+    <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodoText" (keyup.enter)="addTodo()">
+  </section>
+  <section class="list-body" *ngIf="todoList.todos.length > 0">
+    <div class=wrapper>
+      <div class="mark-completed">
+        <input class="toggle-all" type="checkbox" *ngIf="todoList.todos.length" #toggleall [checked]="todoList.allCompleted()" (click)="todoList.setAllTo(toggleall.checked)">
+        <label>Mark All Complete</label>
+      </div>
+      <ul class="todo-list">
+        <li *ngFor="let todo of todoList.todos" [class.completed]="todo.completed" [class.editing]="todo.editing">
+          <div class="view">
+            <input class="toggle" type="checkbox" (click)="toggleCompletion(todo)" [checked]="todo.completed">
+            <label (dblclick)="editTodo(todo)">{{todo.title}}</label>
+            <button class="destroy" (click)="remove(todo)"></button>
+          </div>
+          <input class="edit" *ngIf="todo.editing" [value]="todo.title" #editedtodo (blur)="stopEditing(todo, editedtodo.value)" (keyup.enter)="updateEditingTodo(todo, editedtodo.value)" (keyup.escape)="cancelEditingTodo(todo)">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer" *ngIf="todoList.todos.length > 0">
+    <span class="todo-count"><strong>{{todoList.getRemaining().length}}</strong> {{todoList.getRemaining().length == 1 ? 'item' : 'items'}} left</span>
+    <button class="clear-completed" *ngIf="todoList.getCompleted().length > 0" (click)="removeCompleted()">Clear completed</button>
+    <button class="save" *ngIf="todoList.name != '' || listName != ''" (click)="saveTodos()">Save List</button>
+  </footer>
+</section>

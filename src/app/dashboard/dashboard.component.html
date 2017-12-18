@@ -1,0 +1,18 @@
+<!-- <h3>List Dashboard</h3> -->
+
+<div class="dash">
+  <div class="instr">
+    <p>
+      Hello Friend.
+    </p>
+    <p *ngIf="todoLists.length == 0">Click 'New List' in the left menu-pane to start.</p>
+    <p *ngIf="todoLists.length != 0">Welcome Back.</p>
+  </div>
+  <ul class="dash-pad">
+    <li class="preview" *ngFor="let list of todoLists">
+      <a [routerLink]="['/list', list.name]">
+        {{displayName(list.name)}}
+      </a>
+    </li>
+  </ul>
+</div>

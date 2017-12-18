@@ -1,0 +1,26 @@
+<div class="main main-header">
+  <span class="heading">Potentially Productive</span>
+</div>
+
+<div class="main main-sidebar">
+
+  <nav class="main main-nav">
+    <ul class="nav-list-outer">
+      <li class="nav-list-elem"><a routerLink="/dashboard" [class.active]="_router.isActive('/dashboard')">Dashboard</a></li>
+      <li class="nav-list-elem"><a routerLink="/list/new" [class.active]="_router.isActive('/list/new')">New List</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="info">
+    <p>Double-click to edit a todo</p>
+
+    <p>Base Application Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    <p>Original Created by Sam Saccone and Colin Eberhardt using Angular2</p>
+  </div>
+</div>
+<div class="main main-wrapper">
+
+  <router-outlet></router-outlet>
+
+</div>

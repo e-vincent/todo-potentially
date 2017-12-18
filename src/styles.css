@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0px;
+  font-family: 'ABeeZee';
+  background: url("assets/img/background.png") repeat fixed center;
+}
+
+.main.main-header {
+  box-sizing: content-box;
+  display: inline-box;
+  width: 100%; 
+  position: fixed; 
+  z-index: 2; 
+  top: 0; 
+  left: 0;
+ 
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-left: 40px; 
+  padding-bottom: 10px;
+}
+
+.main.main-header span.heading {
+  background-color: #07ca94;
+  font-weight: bold;
+  font-size: 36px;
+  color: #ffffff;
+  letter-spacing: 5px;
+  padding: 10px 25px;
+  border-radius: 15px 50px;
+
+  box-shadow: 3px 3px 5px 1px rgba(7,38,141,0.3);
+}
+
+
+.main.main-sidebar {
+  height: 100%;
+  width: 200px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #fdfdfd; 
+  overflow-x: hidden; 
+  padding-top: 100px; 
+
+  border-right: 1px #e1e1e1 solid;
+  box-shadow: 4px 3px 5px 1px rgba(7,38,141,0.3);
+}
+
+nav.main-nav {
+  font-family: 'Alef';
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .main.main-sidebar {
+    padding-top: 15px;
+  }
+  .main.main-sidebar a {
+    font-size: 18px;
+  }
+
+  .main.main-header span.heading {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main.main-header {
+    padding-left: 20px;
+  }
+  .main.main-header span.heading {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .main.main-header {
+    padding-left: 10px;
+  }
+  .main.main-header span.heading {
+    font-size: 10px;
+  }
+}
+
+.main.main-wrapper {
+  margin-left: 200px;
+  margin-top: 100px;
+}
